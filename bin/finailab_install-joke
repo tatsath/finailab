@@ -1,0 +1,4 @@
+#!/usr/bin/env python
+
+import finailab_install
+print finailab_install.joke()
