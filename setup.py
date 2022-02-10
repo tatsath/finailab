@@ -44,7 +44,7 @@ setup_args = dict(
         'Programming Language :: Python :: 3',
     ],
     data_files          = [('.', ['version.py'])],
-    scripts=['bin/finailab_install-joke'],	
+    scripts=['bin/run_finailab.cmd'],	
 )
 
 # setuptools requirements
