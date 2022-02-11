@@ -764,7 +764,7 @@ c.NotebookApp.notebook_dir = 'D:\\Python'
 #  By default, all installed kernels are allowed.
 #c.KernelSpecManager.whitelist = set()
 
-c.NotebookApp.port = 8888
+c.NotebookApp.port = 9000
 c.NotebookApp.token = ''
 
 ## The IP address the notebook server will listen on.
