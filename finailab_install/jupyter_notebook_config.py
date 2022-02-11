@@ -1,3 +1,19 @@
+
+c.NotebookApp.port = 9000
+c.NotebookApp.token = ''
+c.NotebookApp.open_browser = False
+
+## The IP address the notebook server will listen on.
+c.NotebookApp.disable_check_xsrf = True
+
+
+c.NotebookApp.tornado_settings = {
+    "headers": {
+        "Content-Security-Policy": "frame-ancestors 'self' *", 
+	 "Access-Control-Allow-Origin": "*",     
+    }
+}
+
 # Configuration file for jupyter-notebook.
 
 #------------------------------------------------------------------------------
@@ -764,18 +780,4 @@ c.NotebookApp.notebook_dir = 'D:\\Python'
 #  By default, all installed kernels are allowed.
 #c.KernelSpecManager.whitelist = set()
 
-c.NotebookApp.port = 9000
-c.NotebookApp.token = ''
-c.NotebookApp.open_browser = False
-
-## The IP address the notebook server will listen on.
-c.NotebookApp.disable_check_xsrf = True
-
-
-c.NotebookApp.tornado_settings = {
-    "headers": {
-        "Content-Security-Policy": "frame-ancestors 'self' *", 
-	 "Access-Control-Allow-Origin": "*",     
-    }
-}
 

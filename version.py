@@ -3,7 +3,7 @@
 
 version_info = (
     0,
-    4,
+    5,
     0,
     #'dev', # comment-out this line for a release
 )
