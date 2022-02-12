@@ -3,18 +3,19 @@ import os
 def main():
     print("Hello world!")   
 
-    out =!python -m site --user-site
+    #out =!python -m site --user-site
 
 
-    out2 = listToString(out)
+    #out2 = listToString(out)
 
-    filename =  os.path.join(out2, "finailab_install", "jupyter_notebook_config.py")
+    #filename =  os.path.join(out2, "finailab_install", "jupyter_notebook_config.py")
 
-    filename2 = filename.replace(os.sep, '/')
+    #filename2 = filename.replace(os.sep, '/')
 
-    type(filename2)
+    #type(filename2)
 
-    !jupyter lab --config={filename2}
+    #!jupyter lab --config={filename2}
+    !jupyter lab --config=D:/Hub/jupyter_notebook_config.py	
 
 if __name__ == "__main__":
     main()
