@@ -1,18 +1,17 @@
 import os
 
 def main():
-    print("Hello world!") 
+    print("Running Jupyter platform!") 
     
     out =str.rstrip(os.popen('python -m site --user-site').read())
 
-    str1 = ""     
+    str_out = ""     
     # traverse in the string  
     for ele in out: 
-        str1 += ele  
-    
-    out2 = listToString(str1)
+        str_out += ele   
+  
 
-    filename =  os.path.join(out2, "finailab_install", "jupyter_notebook_config.py")
+    filename =  os.path.join(str_out, "finailab_install", "jupyter_notebook_config.py")
 
     filename2 = filename.replace(os.sep, '/')    
 
