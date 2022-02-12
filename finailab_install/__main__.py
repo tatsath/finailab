@@ -3,7 +3,7 @@ import os
 def main():
     print("Hello world!")   
 
-    out =!python -m site --user-site"
+    out =!python -m site --user-site
 
 
     out2 = listToString(out)
