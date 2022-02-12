@@ -4,8 +4,13 @@ def main():
     print("Hello world!") 
     
     out =str.rstrip(os.popen('python -m site --user-site').read())
+
+    str1 = ""     
+    # traverse in the string  
+    for ele in out: 
+        str1 += ele  
     
-    out2 = listToString(out)
+    out2 = listToString(str1)
 
     filename =  os.path.join(out2, "finailab_install", "jupyter_notebook_config.py")
 
