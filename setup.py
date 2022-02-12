@@ -45,6 +45,11 @@ setup_args = dict(
     ],
     data_files          = [('.', ['version.py'])],
     scripts=['bin/run_finailab'],	
+    entry_points = {
+        "console_scripts": [
+            "myscript = finailab_install.__main__:main",
+        ]
+    }	
 )
 
 # setuptools requirements
