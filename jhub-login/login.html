@@ -1,0 +1,226 @@
+{% extends "page.html" %} {% if announcement_login %} {% set announcement =
+announcement_login %} {% endif %} {% block login_widget %} {% endblock %}
+{%block main %} {% block login %}
+<div class="container">
+  <nav class="navbar navbar-light bg" style="background-color: orange">
+    <div class="container-fluid">
+      <h1 class="navbar-brand mb-0 h1" style="font-size: 50px; color: white">
+        FinAILab's Platform
+      </h1>
+    </div>
+  </nav>
+
+  <p style="color: Black; font-size: large; text-align: left">
+    <b
+      >This is a demo platform. Setup your own platform using
+      <span style="color: rgb(0, 174, 255)">local machine or cloud </span> by
+      clicking <span style="color: rgb(0, 174, 255)"> + New Platform </span></b
+    >
+  </p>
+
+  <br />
+  <br />
+  <a style="color: black; text-align: center"
+    >*Reach out to info@finailab.com for setting such cloud based hub for big
+    teams and enterprises.</a
+  >
+</div>
+<br />
+<div class="container" id="login-main">
+  <div class="row" style="display: flex">
+    <div class="col-3">
+      {% block login_container %} {% if custom_html %} {{ custom_html | safe }}
+      {% elif login_service %}
+      <div class="service-login">
+        <a
+          role="button"
+          class="btn btn-jupyter btn-lg"
+          href="{{authenticator_login_url}}"
+        >
+          Sign in with {{login_service}}
+        </a>
+      </div>
+      {% else %}
+      <form action="{{login_url}}?next={{next}}" method="post" role="form">
+        <div class="auth-form-header">Sign in</div>
+        <div class="auth-form-body">
+          <p id="insecure-login-warning" class="hidden">
+            Warning: JupyterHub seems to be served over an unsecured HTTP
+            connection. We strongly recommend enabling HTTPS for JupyterHub.
+          </p>
+
+          {% if login_error %}
+          <p class="login_error">{{login_error}}</p>
+          {% endif %}
+          <label for="username_input">Username:</label>
+          <input
+            id="username_input"
+            type="text"
+            autocapitalize="off"
+            autocorrect="off"
+            class="form-control"
+            name="username"
+            val="{{username}}"
+            tabindex="1"
+            autofocus="autofocus"
+          />
+          <label for="password_input">Password:</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password_input"
+            tabindex="2"
+          />
+
+          <div class="feedback-container">
+            <input
+              id="login_submit"
+              type="submit"
+              class="btn btn-jupyter"
+              value="Sign in"
+              tabindex="3"
+            />
+            <div class="feedback-widget hidden">
+              <i class="fa fa-spinner"></i>
+            </div>
+          </div>
+
+          {% block login_terms %} {% if login_term_url %}
+          <div id="login_terms" class="login_terms">
+            <input
+              type="checkbox"
+              id="login_terms_checkbox"
+              name="login_terms_checkbox"
+              required
+            />
+            {% block login_terms_text %} {# allow overriding the text #} By
+            logging into the platform you accept the
+            <a href="{{ login_term_url }}">terms and conditions</a>. {% endblock
+            login_terms_text %}
+          </div>
+          {% endif %} {% endblock login_terms %}
+        </div>
+      </form>
+      {% endif %} {% endblock login_container %}
+    </div>
+    <div class="col-6">
+      <table class="table" style="border: solid 1px">
+        <tr>
+          <th style="width: 55%">
+            <h3>Template by Application in Finance</h3>
+            <br />
+            <i>1. Trading Strategies and Algorithmic Trading</i><br />
+            <br />
+            <a
+              href="https://github.com/tatsath/fin-ml/blob/master/Chapter%206%20-%20Sup.%20Learning%20-%20Classification%20models/CaseStudy3%20-%20Bitcoin%20Trading%20Strategy/BitcoinTradingStrategy.ipynb"
+              style="text-decoration: none"
+              >Bitcoin Trading Strategy using classification</a
+            ><br />
+            <a
+              href="https://github.com/tatsath/fin-ml/blob/master/Chapter%207%20-%20Unsup.%20Learning%20-%20Dimensionality%20Reduction/CaseStudy3%20-Bitcoin%20Trading%20-%20Enhancing%20Speed%20and%20accuracy/BitcoinTradingEnhancingSpeedAccuracy.ipynb"
+              style="text-decoration: none"
+              >Bitcoin Trading - Enhancing Speed and Accuracy using
+              dimensionality reduction</a
+            ><br />
+            <a
+              href="https://github.com/tatsath/fin-ml/blob/master/Chapter%208%20-%20Unsup.%20Learning%20-%20Clustering/Case%20Study1%20-%20Clustering%20for%20Pairs%20Trading/ClusteringForPairsTrading.ipynb"
+              style="text-decoration: none"
+              >Clustering for Pairs Trading Strategy</a
+            ><br />
+            <a
+              href="https://github.com/tatsath/fin-ml/blob/master/Chapter%209%20-%20Reinforcement%20Learning/Case%20Study%201%20-%20Reinforcement%20Learning%20based%20Trading%20Strategy/ReinforcementLearningBasedTradingStrategy.ipynb"
+              style="text-decoration: none"
+              >Reinforcement Learning based Trading Strategy</a
+            ><br />
+            <a
+              href="https://github.com/tatsath/fin-ml/blob/master/Chapter%2010%20-%20Natural%20Language%20Processing/Case%20Study%201%20-%20NLP%20and%20Sentiments%20Analysis%20based%20Trading%20Strategy/NLPandSentimentAnalysisBasedTradingStrategy.ipynb"
+              style="text-decoration: none"
+              >NLP and Sentiments Analysis based Trading Strategy</a
+            >
+            <br />
+            <br />
+            <i>2. Portfolio Management and robo-advisors</i><br />
+            <br />
+            <a
+              href="https://github.com/tatsath/fin-ml/blob/master/Chapter%205%20-%20Sup.%20Learning%20-%20Regression%20and%20Time%20Series%20models/Case%20Study%203%20-%20Investor%20Risk%20Tolerance%20and%20Robo-advisors/InvestorRiskToleranceAndRoboAdvisor.ipynb"
+              style="text-decoration: none"
+              >Investor Risk Tolerance and Robo-advisors using supervised
+              regression</a
+            ><br />
+            <a
+              href="https://github.com/tatsath/fin-ml/blob/master/Chapter%205%20-%20Sup.%20Learning%20-%20Regression%20and%20Time%20Series%20models/Case%20Study%203%20-%20Investor%20Risk%20Tolerance%20and%20Robo-advisors/Sample-Robo%20Advisor.ipynb"
+              style="text-decoration: none"
+              >Robo-Advisor Dashboard-powered by ML</a
+            ><br />
+            <a
+              href="https://github.com/tatsath/fin-ml/blob/master/Chapter%207%20-%20Unsup.%20Learning%20-%20Dimensionality%20Reduction/CaseStudy1%20-%20Portfolio%20Management%20-%20Eigen%20Portfolio/PortfolioManagementEigen%20Portfolio.ipynb"
+              style="text-decoration: none"
+              >Portfolio Management Eigen Portfolio using dimensionality
+              reduction</a
+            ><br />
+            <a
+              href="https://github.com/tatsath/fin-ml/blob/master/Chapter%208%20-%20Unsup.%20Learning%20-%20Clustering/Case%20Study2%20-%20Portfolio%20Management%20-%20%20Clustering%20Investors/PortfolioManagementClusteringInvestors.ipynb"
+              style="text-decoration: none"
+              >Portfolio Management - Clustering Investors</a
+            ><br />
+            <a
+              href="https://github.com/tatsath/fin-ml/blob/master/Chapter%208%20-%20Unsup.%20Learning%20-%20Clustering/Case%20Study3%20-%20Hierarchial%20Risk%20Parity/HierarchicalRiskParity.ipynb"
+              style="text-decoration: none"
+              >Hierarchical Risk Parity - using clustering</a
+            ><br />
+            <a
+              href="https://github.com/tatsath/fin-ml/blob/master/Chapter%209%20-%20Reinforcement%20Learning/Case%20Study%203%20-%20Portfolio%20Allocation/PortfolioAllocation.ipynb"
+              style="text-decoration: none"
+              >Portfolio Allocation - using reinforcement learning</a
+            >
+            <br />
+            <br />
+            <i>3. Derivatives Pricing and Hedging</i><br />
+            <br />
+            <a
+              href="https://github.com/tatsath/fin-ml/blob/master/Chapter%205%20-%20Sup.%20Learning%20-%20Regression%20and%20Time%20Series%20models/Case%20Study%202%20-%20Derivatives%20Pricing/DerivativesPricing.ipynb"
+              style="text-decoration: none"
+              >Derivative Pricing using supervised regression</a
+            ><br />
+            <a
+              href="https://github.com/tatsath/fin-ml/blob/master/Chapter%209%20-%20Reinforcement%20Learning/Case%20Study%202%20-%20Derivatives%20Hedging/DerivativesHedging.ipynb"
+              style="text-decoration: none"
+              >Derivatives Hedging - using reinforcement learning</a
+            >
+            <br />
+            <br />
+            <i>4. Asset Price Prediction</i><br />
+            <br />
+            <a
+              href="https://github.com/tatsath/fin-ml/blob/master/Chapter%208%20-%20Unsup.%20Learning%20-%20Clustering/Clustering-MasterTemplate.ipynb"
+              style="text-decoration: none"
+              >Unsupervised learning-Clustering</a
+            ><br />
+            <a
+              href="https://github.com/tatsath/fin-ml/blob/master/Chapter%2010%20-%20Natural%20Language%20Processing/NLP-MasterTemplate.ipynb"
+              style="text-decoration: none"
+              >Natural Language Processing</a
+            >
+          </th>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock login %} {% endblock %} {% block script %} {{ super() }}
+<script>
+  if (window.location.protocol === "http:") {
+    // unhide http warning
+    var warning = document.getElementById("insecure-login-warning");
+    warning.className = warning.className.replace(/\bhidden\b/, "");
+  }
+  // setup onSubmit feedback
+  $("form").submit((e) => {
+    var form = $(e.target);
+    form.find(".feedback-container>input").attr("disabled", true);
+    form.find(".feedback-container>*").toggleClass("hidden");
+    form.find(".feedback-widget>*").toggleClass("fa-pulse");
+  });
+</script>
+{% endblock %}
