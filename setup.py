@@ -24,14 +24,14 @@ with open(pjoin(here, 'version.py')) as f:
     exec(f.read(), {}, version_ns)
 
 setup_args = dict(
-    name                = 'finailab_install',
-    packages            = ['finailab_install'],
+    name                = 'finailab',
+    packages            = ['finailab'],
     version             = version_ns['__version__'],
     description         = """REMOTE_USER Authenticator: An Authenticator for Jupyterhub to read user information from HTTP request headers, as when running behind an authenticating proxy.""",
     long_description    = "",
-    author              = "Carl (https://github.com/cwaldbieser)",
-    author_email        = "tatsat@gmail.com",
-    url                 = "https://github.com/tatsath/finailab_install",
+    author              = "Carl (https://github.com/tatsath)",
+    author_email        = "tatsatx@gmail.com",
+    url                 = "https://github.com/tatsath/finailab",
     license             = "GPLv3",
     platforms           = "Linux, Mac OS X",
     keywords            = ['Interactive', 'Interpreter', 'Shell', 'Web'],
@@ -47,7 +47,7 @@ setup_args = dict(
     scripts=['bin/run_finailab'],	
     entry_points = {
         "console_scripts": [
-            "myscript = finailab_install.__main__:main",
+            "myscript = finailab.__main__:main",
         ]
     }	
 )

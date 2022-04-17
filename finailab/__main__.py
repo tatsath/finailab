@@ -11,7 +11,7 @@ def main():
         str_out += ele   
   
 
-    filename =  os.path.join(str_out, "finailab_install", "jupyter_notebook_config.py")
+    filename =  os.path.join(str_out, "finailab", "jupyter_notebook_config.py")
 
     filename2 = filename.replace(os.sep, '/')    
 
