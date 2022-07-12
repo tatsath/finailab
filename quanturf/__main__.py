@@ -1,10 +1,13 @@
 import os
+os.system("pip install jupyterlab_templates")
+os.system("jupyter labextension install jupyterlab_templates")
+os.system("jupyter serverextension enable --py jupyterlab_templates")
 
 def main():
     print("Running Jupyter platform!") 
     
     out =str.rstrip(os.popen('python -m site --user-site').read())
-
+    
     str_out = ""     
     # traverse in the string  
     for ele in out: 

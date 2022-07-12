@@ -24,8 +24,8 @@ with open(pjoin(here, 'version.py')) as f:
     exec(f.read(), {}, version_ns)
 
 setup_args = dict(
-    name                = 'finailab',
-    packages            = ['finailab'],
+    name                = 'quanturf',
+    packages            = ['quanturf'],
     version             = version_ns['__version__'],
     description         = """REMOTE_USER Authenticator: An Authenticator for Jupyterhub to read user information from HTTP request headers, as when running behind an authenticating proxy.""",
     long_description    = "",
@@ -44,10 +44,10 @@ setup_args = dict(
         'Programming Language :: Python :: 3',
     ],
     data_files          = [('.', ['version.py'])],
-    scripts=['bin/run_finailab'],	
+    scripts=['bin/run_quanturf'],	
     entry_points = {
         "console_scripts": [
-            "myscript = finailab.__main__:main",
+            "myscript = quanturf.__main__:main",
         ]
     }	
 )
