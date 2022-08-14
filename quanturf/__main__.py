@@ -7,7 +7,7 @@ def main():
     print("Running Jupyter platform!") 
     out=site.getsitepackages()
     str_out = out[1]     
-    filename =  os.path.join(str_out, "finailab", "jupyter_notebook_config.py")
+    filename =  os.path.join(str_out, "quanturf", "jupyter_notebook_config.py")
     filename2 = filename.replace(os.sep, '/')    
     os.system("jupyter lab --config=" + filename2)
    
