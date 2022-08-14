@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 
 import os
-import finailab_install
-
-out =!python -m site --user-site"
+import site
+out=site.getsitepackages()
 
 def listToString(s): 
     

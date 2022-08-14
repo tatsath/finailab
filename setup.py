@@ -26,7 +26,7 @@ with open(pjoin(here, 'version.py')) as f:
 setup_args = dict(
     name                = 'quanturf',
     packages            = ['quanturf'],
-    version             = version_ns['__version__'],
+    version             = "2.0",
     description         = """REMOTE_USER Authenticator: An Authenticator for Jupyterhub to read user information from HTTP request headers, as when running behind an authenticating proxy.""",
     long_description    = "",
     author              = "Carl (https://github.com/tatsath)",
@@ -44,7 +44,7 @@ setup_args = dict(
         'Programming Language :: Python :: 3',
     ],
     data_files          = [('.', ['version.py'])],
-    scripts=['bin/run_quanturf'],	
+    # scripts=['bin/run_quanturf'],	
     entry_points = {
         "console_scripts": [
             "myscript = quanturf.__main__:main",
