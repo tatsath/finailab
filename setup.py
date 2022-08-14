@@ -26,7 +26,7 @@ with open(pjoin(here, 'version.py')) as f:
 setup_args = dict(
     name                = 'quanturf',
     packages            = ['quanturf'],
-    version             = "2.1",
+    version             = "3",
     description         = """REMOTE_USER Authenticator: An Authenticator for Jupyterhub to read user information from HTTP request headers, as when running behind an authenticating proxy.""",
     long_description    = "",
     author              = "Carl (https://github.com/tatsath)",
