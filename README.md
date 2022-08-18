@@ -1,7 +1,8 @@
-
 # Welcome to Quanturf! 
 
 ### End to end Algo Trading made seamless!
+
+#### To  see the template, click the quanturf.ipynb file 
 
 #### just run following code to install any of the packages below and run in inside Quanturf platform
 
