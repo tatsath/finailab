@@ -2,6 +2,13 @@
 
 ### End to end Algo Trading made seamless!
 
+### Step 1. Installing quantruf package
+#####  Write the following commands
+##### pip install quanturf
+##### python -m quanturf
+
+
+### STEP 2
 #### To  see the template, click the quanturf.ipynb file 
 
 #### just run following code to install any of the packages below and run in inside Quanturf platform
