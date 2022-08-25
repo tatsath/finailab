@@ -26,7 +26,7 @@ with open(pjoin(here, 'version.py')) as f:
 setup_args = dict(
     name='quanturf',
     packages=['quanturf'],
-    version="7",
+    version="7.3",
     description="""REMOTE_USER Authenticator: An Authenticator for Jupyterhub to read user information from HTTP request headers, as when running behind an authenticating proxy.""",
     long_description="",
     author="Carl (https://github.com/tatsath)",
@@ -43,6 +43,8 @@ setup_args = dict(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
     ],
+    package_data={'': ['quanturf.ipynb']},
+    include_package_data=True,
     data_files=[('.', ['version.py'])],
     # scripts=['bin/run_quanturf'],
     entry_points={
@@ -55,7 +57,7 @@ setup_args = dict(
 # setuptools requirements
 if 'setuptools' in sys.modules:
     setup_args['install_requires'] = install_requires = []
-    install_requires.append('jupyterlab3.4.4')
+    install_requires.append('jupyterlab')
     install_requires.append('jupyterlab_templates')
 
 
