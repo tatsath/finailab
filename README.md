@@ -6,6 +6,7 @@
 #####  Write the following commands
 ##### pip install quanturf
 ##### python -m quanturf
+#### Get the right dataset using the link [here](https://finailab-dash.herokuapp.com/equities)
 
 
 ### STEP 2
